@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import LiIcon from './LiIcon';
 
 
-const Details = ({type, time, place, info}) => {
+const Details = ({type, time, place, courseLink, info}) => {
   const ref = useRef(null);
 
   return (
@@ -22,7 +22,7 @@ const Details = ({type, time, place, info}) => {
           {type}
         </h3>
         <span className='captalize font-medium text-dark/75'>
-          {time} | {place}
+          {time} | <a href={courseLink} target='_blank' className='text-primary font-bold'>{place}</a>
         </span>
         <p className='font-medium w-full '>
           {info}
@@ -60,7 +60,8 @@ const Education = () => {
           <Details 
           type='Introduction to Front-end Development '
           time='Nov 2022' 
-          place='Certification Meta Platforms, Inc.'
+          place='Certification Meta Platforms, Inc.' 
+          courseLink='https://www.coursera.org/learn/introduction-to-front-end-development?specialization=meta-front-end-developer'
           info='This certification by Meta Platforms provides a solid foundation
           in the essential concepts, tools, and technologies used in front-end 
           development.'
@@ -69,6 +70,7 @@ const Education = () => {
           type='Programming with JavaScript'
           time='Nov 2022' 
           place='Certification Meta Platforms, Inc.'
+          courseLink='https://www.coursera.org/learn/programming-with-javascript?specialization=meta-front-end-developer'
           info="This certification aims to demonstrate that candidates have a
           solid understanding of JavaScript's core concepts, syntax, and the ability
           to build interactive web applications using this language."
@@ -77,6 +79,7 @@ const Education = () => {
           type='Version Control'
           time='Nov 2022' 
           place='Certification Meta Platforms, Inc.'
+          courseLink='https://www.coursera.org/learn/introduction-to-version-control?specialization=meta-front-end-developer'
           info="The Version Control Certification focuses on demonstrating an 
           individual's proficiency in version control systems (VCS) and related 
           tools. Version control is a crucial aspect of modern software 
@@ -87,11 +90,22 @@ const Education = () => {
           type='HTML and CSS in depth'
           time='Dec 2022' 
           place='Certification Meta Platforms, Inc.'
+          courseLink='https://www.coursera.org/learn/html-and-css-in-depth?specialization=meta-front-end-developer'
           info="The HTML and CSS in Depth Certification typically aims to validate 
           an individual's expertise in front-end web development, specifically
           focusing on HTML (Hypertext Markup Language) and CSS 
           (Cascading Style Sheets). These two core technologies are essential for 
           creating and styling web content."
+          />
+          <Details 
+          type='UI Design para Iniciantes'
+          time='Oct 2023' 
+          place='Origamid.'
+          courseLink='https://www.origamid.com/'
+          info="UI Design para Iniciantes is a course designed to introduce beginners 
+          to the fundamentals of User Interface (UI) design. UI design is a critical 
+          aspect of web and app development, focusing on creating visually appealing 
+          and user-friendly interfaces for digital products."
           />
 
         </ul>

@@ -93,8 +93,8 @@ const about = () => {
 
             <div className='col-span-3 relative h-max rounded-[2rem] border-2
             border-solid border-dark bg-light p-8'>
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[102%] 
-              rounded-2xl bg-dark"/>
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] 
+              rounded-[2rem] bg-dark"/>
               <Image src={profilePic} alt='Carlos Gustavo' 
               className='w-full h-auto rounded-2xl' />
             </div>
@@ -137,6 +137,7 @@ const about = () => {
           <Education />
 
         </Layout>
+        
       </main>
     </>
   )

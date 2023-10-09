@@ -14,11 +14,10 @@ export default function Home() {
       <Head>
       <title>CGRFARIA | Portfolio</title>
         <meta name="description" 
-        content="Welcome to C.Gustavo's Portfolio | A Front-End Developer and UI/UX 
-        Designer | Crafting Exceptional Web Experiences with the latest Technologies, 
-        such as HTML, CSS, JavaScript, React, TypeScript, Next.js, Tailwind CSS, 
-        Figma and Adobe XD | Explore My Work and Expertise in Responsive Web 
-        Development and User-Centric Design." />
+        content="Welcome to my Creative World of Web Development and UI/UX Design. 
+        I'm Carlos Gustavo, an Experienced Front-End Developer and UI/UX Designer 
+        Crafting Innovative Digital Experiences. 
+        Explore My Portfolio for Inspiring Solutions." />
       </Head>
 
       <main className='flex items-center text-dark w-full min-h-screen'>

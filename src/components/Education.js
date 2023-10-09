@@ -107,6 +107,16 @@ const Education = () => {
           aspect of web and app development, focusing on creating visually appealing 
           and user-friendly interfaces for digital products."
           />
+          <Details 
+          type='HTML e CSS para Iniciantes'
+          time='Oct 2023' 
+          place='Origamid.'
+          courseLink='https://www.origamid.com/'
+          info="This course was designed to introduce participants to the fundamentals 
+          of web development, specifically focusing on HTML (Hypertext Markup Language) 
+          and CSS (Cascading Style Sheets). These two core technologies are essential 
+          for creating and styling web pages."
+          />
 
         </ul>
       </div>

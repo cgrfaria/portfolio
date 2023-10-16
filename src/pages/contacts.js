@@ -16,7 +16,7 @@ const contacts = () => {
         Your communication matters to us." />
       </Head>
 
-      <main className='flex flex-col w-full mb-16 items-center justify-center'>
+      <main className='flex flex-col w-full mb-16 items-center justify-center overflow-hidden'>
         <Layout className='pt-16'> 
           <AnimatedTextAbout text='Words Can Change The World!' 
           className='mb-16' />

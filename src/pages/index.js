@@ -17,15 +17,18 @@ export default function Home() {
         content="Welcome to my Creative World of Web Development and UI/UX Design. 
         I'm Carlos Gustavo, an Experienced Front-End Developer and UI/UX Designer 
         Crafting Innovative Digital Experiences. 
-        Explore My Portfolio for Inspiring Solutions." />
+         Explore My Portfolio for Inspiring Solutions." />
       </Head>
 
-      <main className='flex items-center text-dark w-full min-h-screen'>
+      <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
 
         <Layout className='pt-0'>
           <div className="flex items-center justify-between w-full">
             <div className='w-1/2'>
-              <Image src={profilePic} alt='Carlos Gustavo' className='w-full h-auto' />
+              <Image src={profilePic} alt='Carlos Gustavo' className='w-full h-auto' 
+              priority
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
+              />
             </div>
 
             <div className='w-1/2 flex flex-col items-center self-center'>

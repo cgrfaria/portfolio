@@ -50,7 +50,7 @@ const about = () => {
         Development and User-Centric Design." />
       </Head>
 
-      <main className="flex flex-col w-full items-center justify-center">
+      <main className="flex flex-col w-full items-center justify-center dark:text-light">
 
         <Layout className="pt-16 ">
 
@@ -62,7 +62,7 @@ const about = () => {
 
             <div className="flex flex-col col-span-3 items-start justify-start">
               
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 Biography
               </h2>
               
@@ -92,11 +92,14 @@ const about = () => {
             {/* Photography DIV */}
 
             <div className='col-span-3 relative h-max rounded-[2rem] border-2
-            border-solid border-dark bg-light p-8'>
+            border-solid border-dark dark:border-light bg-light dark:bg-dark p-8'>
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] 
-              rounded-[2rem] bg-dark"/>
+              rounded-[2rem] bg-dark dark:bg-light"/>
               <Image src={profilePic} alt='Carlos Gustavo' 
-              className='w-full h-auto rounded-2xl' />
+              className='w-full h-auto rounded-2xl' 
+              priority
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              />
             </div>
 
             {/* Increase Numbers DIV */}
@@ -107,7 +110,8 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold">
                 <AnimatedNumbers value={10} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>
+                <h2 className='text-xl font-medium capitalize text-dark/75 
+                dark:text-light/75'>
                   projects completed
                 </h2>
               </div>
@@ -116,7 +120,8 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold">
                 <AnimatedNumbers value={6} />+
                 </span>
-                <h2 className='text-xl text-right font-medium capitalize text-dark/75'>
+                <h2 className='text-xl text-right font-medium capitalize text-dark/75
+                dark:text-light/75'>
                 Skilled Libs and Frameworks
                 </h2>
               </div>
@@ -125,7 +130,8 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold">
                 <AnimatedNumbers value={2} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>
+                <h2 className='text-xl font-medium capitalize text-dark/75 
+                dark:text-light/75'>
                   years of experience
                 </h2>
               </div>

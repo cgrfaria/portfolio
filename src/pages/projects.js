@@ -17,24 +17,28 @@ const FeaturedProject = ({type, title, summary, img, link, linkProject}) => {
   return (
 
       <article className='w-full flex items-center justify-between rounded-3xl 
-      border border-solid border-dark bg-light shadow-2xl p-12 relative 
-      rounded-br-2xl'>
+      border border-solid border-dark dark:border-light 
+      dark:bg-dark bg-light shadow-2xl p-12 relative rounded-br-2xl'>
+
         <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] 
-              rounded-[2.5rem] bg-dark rounded-br-3xl"/>
+              rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl"/>
 
         <Link href={link} target='_blank'
         className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
-          <Image src={img} alt={title} className='w-full h-auto' />
+          <Image src={img} alt={title} className='w-full h-auto' 
+          priority
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
+          />
         </Link>
 
         <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
 
-          <span className='text-primary font-bold text-xl'>{type}</span>
-          <Link href={link} target='_blank' className='hover:underline 
+          <span className='text-primary dark:text-primaryDark font-bold text-xl'>{type}</span>
+          <Link href={link} target='_blank' className='hover:underline dark:text-light
           underline-offset-2'>
             <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
           </Link>
-          <p className='my-2 font-medium text-dark'>{summary}</p>
+          <p className='my-2 font-medium text-dark dark:text-light/60'>{summary}</p>
 
           <div className='mt-2 flex items-center'>
 
@@ -42,7 +46,8 @@ const FeaturedProject = ({type, title, summary, img, link, linkProject}) => {
               <GithubIcon /> 
             </Link>
             <Link href={linkProject} target='_blank' className='ml-4 rounded-lg bg-dark text-light
-            p-2 px-6 text-lg font-semibold hover:bg-white hover:text-dark'>
+            p-2 px-6 text-lg font-semibold hover:bg-white hover:text-dark dark:bg-black 
+            dark:hover:bg-light'>
               Visit Project
             </Link>
 
@@ -57,10 +62,10 @@ const FeaturedProject = ({type, title, summary, img, link, linkProject}) => {
 const Project = ({title, type, img, link, linkProject}) => {
   return (
     <article className='w-full flex flex-col items-center justify-center rounded-2xl
-    border border-solid border-dark bg-light relative p-6'>
+    border border-solid border-dark dark:border-light bg-light dark:bg-dark relative p-6'>
 
         <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] 
-        rounded-[2rem] bg-dark rounded-br-3xl"/>
+        rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl"/>
 
         <Link href={link} target='_blank'
         className='w-full cursor-pointer overflow-hidden rounded-lg'>
@@ -69,16 +74,16 @@ const Project = ({title, type, img, link, linkProject}) => {
 
         <div className='w-full flex flex-col items-start justify-between mt-4'>
 
-          <span className='text-primary font-bold text-xl'>{type}</span>
+          <span className='text-primary dark:text-primaryDark font-bold text-xl'>{type}</span>
           <Link href={link} target='_blank' className='hover:underline 
           underline-offset-2'>
-            <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
+            <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light'>{title}</h2>
           </Link>
 
           <div className='w-full mt-2 flex items-center justify-between'>
           
             <Link href={linkProject} target='_blank' className='text-lg font-semibold
-            underline hover:no-underline'>
+            underline hover:no-underline dark:text-light/70'>
               Visit
             </Link>
             <Link href='https://github.com/cgrfaria' target='_blank' className='w-8'> 
@@ -103,7 +108,7 @@ const projects = () => {
         by Real-world Examples of Stunning Websites and User-Centric Designs." />
       </Head>
 
-      <main className="w-full mb-16 flex flex-col items-center justify-center">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
 
           <AnimatedTextAbout text='Imagination Trumps Knowledge!' />

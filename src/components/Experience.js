@@ -19,9 +19,10 @@ const Details = ({position, company, companyLink, time, address, work}) => {
         transition={{ duration: 0.5, type: 'spring' }}
         >
           <h3 className='font-bold text-2xl'>
-            {position}&nbsp;<a href={companyLink} target='_blank' className='text-primary'>@{company}</a>
+            {position}&nbsp;<a href={companyLink} target='_blank' className='text-primary
+            dark:text-primaryDark'>@{company}</a>
           </h3>
-          <span className='captalize font-medium text-dark/75'>
+          <span className='captalize font-medium text-dark/75 dark:text-light/50'>
             {time} | {address}
           </span>
           <p className='font-medium w-full '>
@@ -51,7 +52,7 @@ const Experience = () => {
 
         <motion.div
         style={{scaleY: scrollYProgress}} 
-        className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top ' />
+        className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top ' />
 
         <ul className='w-full flex flex-col items-start justify-between ml-4'>
           

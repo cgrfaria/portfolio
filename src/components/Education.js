@@ -21,8 +21,9 @@ const Details = ({type, time, place, courseLink, info}) => {
         <h3 className='font-bold text-2xl'>
           {type}
         </h3>
-        <span className='captalize font-medium text-dark/75'>
-          {time} | <a href={courseLink} target='_blank' className='text-primary font-bold'>{place}</a>
+        <span className='captalize font-medium text-dark/75 dark:text-light/50'>
+          {time} | <a href={courseLink} target='_blank' className='text-primary dark:text-primaryDark
+          font-bold'>{place}</a>
         </span>
         <p className='font-medium w-full '>
           {info}
@@ -52,7 +53,7 @@ const Education = () => {
 
         <motion.div
         style={{scaleY: scrollYProgress}} 
-        className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top' 
+        className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top' 
         />
 
         <ul className='w-full flex flex-col items-start justify-between ml-4'>

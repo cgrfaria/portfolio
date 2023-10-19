@@ -12,6 +12,7 @@ import project4 from "../../public/images/projects/thumb-project-4.png"
 import project5 from "../../public/images/projects/thumb-project-5.png"
 import project6 from "../../public/images/projects/thumb-project-6.png"
 import { motion, useScroll, useSpring } from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 
 
 const FramerImage = motion(Image);
@@ -143,7 +144,7 @@ const projects = () => {
         Witness Innovation, Creativity, and Functionality in Action. Get Inspired 
         by Real-world Examples of Stunning Websites and User-Centric Designs." />
       </Head>
-
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
 

@@ -8,6 +8,7 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Education from "@/components/Education";
+import TransitionEffect from "@/components/TransitionEffect";
 
 
 const AnimatedNumbers = ({value}) => {
@@ -49,7 +50,7 @@ const about = () => {
         Figma and Adobe XD | Explore My Work and Expertise in Responsive Web 
         Development and User-Centric Design." />
       </Head>
-
+      <TransitionEffect />
       <main className="flex flex-col w-full items-center justify-center dark:text-light">
 
         <Layout className="pt-16 ">

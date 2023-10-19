@@ -1,5 +1,6 @@
 import AnimatedTextAbout from '@/components/AnimatedTextAbout';
 import Layout from '@/components/Layout';
+import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
@@ -15,7 +16,7 @@ const contacts = () => {
         Get in touch, ask questions, or share feedback effortlessly. 
         Your communication matters to us." />
       </Head>
-
+      <TransitionEffect />
       <main className='flex flex-col w-full mb-16 items-center justify-center overflow-hidden'>
         <Layout className='pt-16'> 
           <AnimatedTextAbout text='Words Can Change The World!' 

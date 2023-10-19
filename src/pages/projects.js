@@ -24,13 +24,16 @@ const FeaturedProject = ({type, title, summary, img, link, linkProject}) => {
 
       <article className='w-full flex items-center justify-between rounded-3xl 
         border border-solid border-dark dark:border-light 
-        dark:bg-dark bg-light shadow-2xl p-12 relative rounded-br-2xl'>
+        dark:bg-dark bg-light shadow-2xl p-12 relative rounded-br-2xl
+        lg:flex-col lg:p-8 xs:rounded-2xl xs:roundede-br-3xl xs:p-4'>
 
         <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] 
-              rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl"/>
+          rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl
+          xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]"
+        />
 
         <Link href={link} target='_blank'
-        className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
+        className='w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full'>
           <FramerImage src={img} alt={title} className='w-full h-auto' 
           whileHover={{scale: 1.05}}
           transition={{duration: 0.2}}
@@ -39,23 +42,33 @@ const FeaturedProject = ({type, title, summary, img, link, linkProject}) => {
           />
         </Link>
 
-        <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
+        <div className='w-1/2 flex flex-col items-start justify-between pl-6 
+          lg:w-full lg:pl-0 lg:pt-6'>
 
-          <span className='text-primary dark:text-primaryDark font-bold text-xl'>{type}</span>
+          <span className='text-primary dark:text-primaryDark font-bold text-xl xs:text-base'>
+            {type}
+          </span>
+
           <Link href={link} target='_blank' className='hover:underline dark:text-light
-          underline-offset-2'>
-            <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
+            underline-offset-2'>
+            <h2 className='my-2 w-full text-left text-4xl font-bold sm:text-2xl'>
+              {title}
+            </h2>
           </Link>
-          <p className='my-2 font-medium text-dark dark:text-light/60'>{summary}</p>
+
+          <p className='my-2 font-medium text-dark dark:text-light/60 sm:text-sm'>
+            {summary}
+          </p>
 
           <div className='mt-2 flex items-center'>
 
             <Link href='https://github.com/cgrfaria' target='_blank' className='w-10'> 
               <GithubIcon /> 
             </Link>
+
             <Link href={linkProject} target='_blank' className='ml-4 rounded-lg bg-dark text-light
-            p-2 px-6 text-lg font-semibold hover:bg-white hover:text-dark dark:bg-black 
-            dark:hover:bg-light'>
+              p-2 px-6 text-lg font-semibold hover:bg-white hover:text-dark dark:bg-black 
+              dark:hover:bg-light sm:px-4 sm:text-base'>
               Visit Project
             </Link>
 
@@ -70,13 +83,16 @@ const FeaturedProject = ({type, title, summary, img, link, linkProject}) => {
 const Project = ({title, type, img, link, linkProject}) => {
   return (
     <article className='w-full flex flex-col items-center justify-center rounded-2xl
-    border border-solid border-dark dark:border-light bg-light dark:bg-dark relative p-6'>
+      border border-solid border-dark dark:border-light bg-light dark:bg-dark relative p-6
+      xs:p-4'>
 
         <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] 
-        rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl"/>
+          rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl 
+          md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
+        />
 
         <Link href={link} target='_blank'
-        className='w-full cursor-pointer overflow-hidden rounded-lg'>
+          className='w-full cursor-pointer overflow-hidden rounded-lg'>
           <FramerImage src={img} alt={title} className='w-full h-auto' 
           whileHover={{scale: 1.05}}
           transition={{duration: 0.2}}
@@ -87,19 +103,25 @@ const Project = ({title, type, img, link, linkProject}) => {
 
         <div className='w-full flex flex-col items-start justify-between mt-4'>
 
-          <span className='text-primary dark:text-primaryDark font-bold text-xl'>{type}</span>
+          <span className='text-primary dark:text-primaryDark font-bold text-xl
+            lg:text-lg md:text-base'>
+            {type}
+          </span>
+
           <Link href={link} target='_blank' className='hover:underline 
-          underline-offset-2'>
-            <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light'>{title}</h2>
+            underline-offset-2'>
+            <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light lg:text-2xl'>
+              {title}
+            </h2>
           </Link>
 
           <div className='w-full mt-2 flex items-center justify-between'>
           
             <Link href={linkProject} target='_blank' className='text-lg font-semibold
-            underline hover:no-underline dark:text-light/70'>
+              underline hover:no-underline dark:text-light/70 md:text-base'>
               Visit
             </Link>
-            <Link href='https://github.com/cgrfaria' target='_blank' className='w-8'> 
+            <Link href='https://github.com/cgrfaria' target='_blank' className='w-8 md:w-6'> 
               <GithubIcon /> 
             </Link>  
 
@@ -127,37 +149,34 @@ const projects = () => {
 
           <AnimatedTextAbout text='Imagination Trumps Knowledge!' />
 
-          <div className="grid grid-cols-12 gap-24 gap-y-32">
+          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 sm:gap-x-0 
+            md:gap-y-24">
 
             <div className="col-span-12">
-
               <FeaturedProject 
-              title='Bikcraft'
-              img={project1}
-              summary='A feature-rich e-commerce using HTML, CSS and JavaScript. 
-              High-precision and high-quality electric bicycles, custom-made for you. 
-              Explore the world at your own pace with Bikcraft.'
-              link='https://cgrfaria.github.io/bikcraft/'
-              github='https://github.com/cgrfaria'
-              linkProject='https://github.com/cgrfaria/bikcraft'
-              type='Featured Project'
+                title='Bikcraft'
+                img={project1}
+                summary='A feature-rich e-commerce using HTML, CSS and JavaScript. 
+                High-precision and high-quality electric bicycles, custom-made for you. 
+                Explore the world at your own pace with Bikcraft.'
+                link='https://cgrfaria.github.io/bikcraft/'
+                github='https://github.com/cgrfaria'
+                linkProject='https://github.com/cgrfaria/bikcraft'
+                type='Featured Project'
               />
-
             </div>
 
-            <div className="col-span-6">
-
+            <div className="col-span-6 md:col-span-12">
               <Project 
-              title='DoctorCare'
-              img={project2}
-              link='https://cgrfaria.github.io/doctorCare/'
-              linkProject='https://github.com/cgrfaria/doctorCare'
-              type='Featured Project'
+                title='DoctorCare'
+                img={project2}
+                link='https://cgrfaria.github.io/doctorCare/'
+                linkProject='https://github.com/cgrfaria/doctorCare'
+                type='Featured Project'
               />
-
             </div>
 
-            <div className="col-span-6">
+            <div className="col-span-6 md:col-span-12">
             <Project 
               title='Payment System App'
               img={project3}
@@ -182,7 +201,7 @@ const projects = () => {
               />
             </div>
 
-            <div className="col-span-6">
+            <div className="col-span-6 md:col-span-12">
             <Project 
               title='Movie Land'
               img={project5}
@@ -192,8 +211,8 @@ const projects = () => {
               />
             </div>
 
-            <div className="col-span-6">
-            <Project 
+            <div className="col-span-6 md:col-span-12">
+              <Project 
               title='World Cup Calendar'
               img={project6}
               link='https://world-cup-calendar.vercel.app/'

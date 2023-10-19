@@ -21,18 +21,20 @@ const contacts = () => {
           <AnimatedTextAbout text='Words Can Change The World!' 
           className='mb-16' />
 
-          <div className="grid grid-cols-8 w-full gap-[8rem]">
+          <div className="grid grid-cols-8 gap-[8rem] lg:grid-cols-1 xs:gap-0">
             
-            <div className="flex flex-col col-span-4 items-start justify-start pt-4">
+            <div className="flex flex-col col-span-4 items-start pt-4 lg:items-center">
               
-              <h2 className="mb-6 text-3xl font-bold uppercase text-dark/75 dark:text-light/75">
+              <h2 className="mb-6 text-3xl font-bold uppercase text-dark/75 dark:text-light/75
+                xs:text-2xl">
                 GET IN TOUCH
               </h2>
 
               <form class="form" action="./contato.html">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-4 gap-10 xs:grid-cols-1">
+
+                  <div className='col-span-2'>
                     <label for="name" className="block text-sm font-medium text-gray-700 
                     dark:text-light/60">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your name" className="mt-1 p-2 
@@ -41,7 +43,7 @@ const contacts = () => {
                     dark:focus:ring-primaryDark" />
                   </div>
 
-                  <div>
+                  <div className='col-span-2'>
                     <label for="phone" className="block text-sm font-medium text-gray-700 
                     dark:text-light/60">Phone</label>
                     <input type="text" id="phone" name="phone" placeholder="+123 456 789 100" 
@@ -71,7 +73,7 @@ const contacts = () => {
                   </textarea>
                 </div>
 
-                <button class="botao mt-6 bg-primary hover:bg-white hover:text-primary 
+                <button className="botao mt-6 bg-primary hover:bg-white hover:text-primary 
                   text-white font-semibold py-2 px-4 rounded-full dark:bg-primaryDark dark:text-black
                   dark:hover:text-primaryDark dark:hover:bg-black">
                   Send Message
@@ -80,7 +82,7 @@ const contacts = () => {
               </form>
             </div>
             <div className="flex flex-col col-span-4 items-center">
-              <Image src={worldPic} alt="World" className="w-[500px] h-[500px]" 
+              <Image src={worldPic} alt="World" className=" xl:mt-10 w-full h-auto lg:hidden" 
               priority
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               />

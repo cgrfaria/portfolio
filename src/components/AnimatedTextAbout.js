@@ -32,10 +32,11 @@ const AnimatedTextAbout = ({text, className=""}) => {
   return (
     <div className='w-full mx-auto py-2 flex items-center justify-center text-center
     overflow-hidden sm:py-0'>
-      <motion.h1 className={'inline-block w-full text-dark dark:text-light font-bold capitalize text-8xl mb-16 ${className}'}
-      variants={quote}
-      initial='initial'
-      animate='animate'>
+      <motion.h1 
+        className={'inline-block w-full text-dark dark:text-light font-bold capitalize text-8xl mb-16 lg:text-7xl md:text-6xl sm:text-6xl sm:mb-8 xs:text-4xl ${className}'}
+        variants={quote}
+        initial='initial'
+        animate='animate'>
         {
           text.split(" ").map((word, index) => 
           <motion.span key={word+'-'+index} className='inline-block'

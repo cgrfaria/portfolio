@@ -1,12 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '@/components/Layout'
-import profilePic from '../../public/images/profile/developer-origin.png'
+import profilePic from '../../public/images/profile/artProfile.png'
 import AnimatedText from '../components/AnimatedText'
 import Link from 'next/link'
 import { LinkArrow } from '../components/icons'
 import HireMe from '../components/HireMe'
-import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg'
 import { TransitionEffect } from '@/components/TransitionEffect'
 
 export default function Home() {
@@ -27,7 +26,8 @@ export default function Home() {
           <div className="flex items-center justify-between w-full lg:flex-col">
             <div className='w-1/2 md:w-full'>
               <Image src={profilePic} alt='Carlos Gustavo' className='w-full h-auto
-              lg:hidden md:inline-block md:w-full' 
+              mb-[100px] lg:hidden md:inline-block md:mb-0 md:w-full md:ml-[40px] 
+              sm:ml-[18px]' 
               priority
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
               />
@@ -45,7 +45,7 @@ export default function Home() {
 
               <div className='flex items-center self-start mt-2 lg:self-center'>
 
-                <Link href="/dummy.pdf" target={"_blank"}
+                <Link href="/cgrfariaDevResume.pdf" target={"_blank"}
                   className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg
                   font-semibold hover:bg-white hover:text-dark md:p-2 md-px-4 md:text-base'
                   download={true}>
@@ -64,11 +64,6 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
-          <Image src={lightBulb} alt='Lamp' className='w-full h-auto' />
-        </div>
-
-
       </main>
     </>
   )

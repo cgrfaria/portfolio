@@ -52,7 +52,7 @@ const FeaturedProject = ({type, title, summary, img, link, linkProject}) => {
 
           <Link href={link} target='_blank' className='hover:underline dark:text-light
             underline-offset-2'>
-            <h2 className='my-2 w-full text-left text-4xl font-bold sm:text-2xl'>
+            <h2 className='my-2 w-full text-left text-4xl font-bold md:text-2xl'>
               {title}
             </h2>
           </Link>
@@ -61,16 +61,16 @@ const FeaturedProject = ({type, title, summary, img, link, linkProject}) => {
             {summary}
           </p>
 
-          <div className='mt-2 flex items-center'>
+          <div className='w-full mt-2 flex items-center justify-between'>
 
-            <Link href='https://github.com/cgrfaria' target='_blank' className='w-10'> 
-              <GithubIcon /> 
+            <Link href={linkProject} target='_blank' className='rounded-lg bg-dark text-light
+              p-2 px-6 text-lg font-semibold hover:bg-white hover:text-dark dark:bg-black 
+              dark:hover:bg-light sm:px-4 sm:text-base xs:text-sm xs:px-2'>
+              Visit Project
             </Link>
 
-            <Link href={linkProject} target='_blank' className='ml-4 rounded-lg bg-dark text-light
-              p-2 px-6 text-lg font-semibold hover:bg-white hover:text-dark dark:bg-black 
-              dark:hover:bg-light sm:px-4 sm:text-base'>
-              Visit Project
+            <Link href='https://github.com/cgrfaria' target='_blank' className='w-10 sm:w-8'> 
+              <GithubIcon /> 
             </Link>
 
           </div>
@@ -81,9 +81,9 @@ const FeaturedProject = ({type, title, summary, img, link, linkProject}) => {
   )
 };
 
-const Project = ({title, type, img, link, linkProject}) => {
+const Project = ({title, type, img, summary, link, linkProject}) => {
   return (
-    <article className='w-full flex flex-col items-center justify-center rounded-2xl
+    <article className='w-full min-w-[321px] md:min-w-0 mx-auto flex flex-col items-center justify-center rounded-2xl
       border border-solid border-dark dark:border-light bg-light dark:bg-dark relative p-6
       xs:p-4'>
 
@@ -116,13 +116,23 @@ const Project = ({title, type, img, link, linkProject}) => {
             </h2>
           </Link>
 
+          <p className='my-2 font-medium text-dark dark:text-light/60 sm:text-sm'>
+            {summary}
+          </p>
+
           <div className='w-full mt-2 flex items-center justify-between'>
           
-            <Link href={linkProject} target='_blank' className='text-lg font-semibold
+            {/* <Link href={linkProject} target='_blank' className='text-lg font-semibold
               underline hover:no-underline dark:text-light/70 md:text-base'>
               Visit
+            </Link> */}
+            <Link href={linkProject} target='_blank' className='rounded-lg bg-dark text-light
+              p-2 px-6 text-lg font-semibold hover:bg-white hover:text-dark dark:bg-black 
+              dark:hover:bg-light sm:px-4 sm:text-base xs:text-sm xs:px-2'>
+              Visit Project
             </Link>
-            <Link href='https://github.com/cgrfaria' target='_blank' className='w-8 md:w-6'> 
+
+            <Link href='https://github.com/cgrfaria' target='_blank' className='w-10 sm:w-8 xs:-6'> 
               <GithubIcon /> 
             </Link>  
 
@@ -146,7 +156,7 @@ const projects = () => {
       </Head>
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
-        <Layout className="pt-16">
+        <Layout className="pt-16 ">
 
           <AnimatedTextAbout text='Imagination Trumps Knowledge!' />
 
@@ -162,7 +172,7 @@ const projects = () => {
                 Explore the world at your own pace with Bikcraft.'
                 link='https://cgrfaria.github.io/bikcraft/'
                 github='https://github.com/cgrfaria'
-                linkProject='https://github.com/cgrfaria/bikcraft'
+                linkProject='https://cgrfaria.github.io/bikcraft/'
                 type='Featured Project'
               />
             </div>
@@ -171,8 +181,12 @@ const projects = () => {
               <Project 
                 title='DoctorCare'
                 img={project2}
+                summary='This is a comprehensive online platform dedicated to facilitating 
+                the scheduling and management of medical appointments. This platform offers a convenient 
+                and user-friendly interface that connects healthcare providers and patients, improving 
+                the efficiency and accessibility of healthcare services.'
                 link='https://cgrfaria.github.io/doctorCare/'
-                linkProject='https://github.com/cgrfaria/doctorCare'
+                linkProject='https://cgrfaria.github.io/doctorCare/'
                 type='Featured Project'
               />
             </div>
@@ -181,8 +195,14 @@ const projects = () => {
             <Project 
               title='Payment System App'
               img={project3}
+              summary='An user-friendly platform designed to facilitate 
+              online payments providing a convenient way for users to make secure credit cards transactions. 
+              This payment system allows for the secure handling of financial information, 
+              making it a crucial component of e-commerce and online business operations.
+
+              '
               link='https://payment-system-seven.vercel.app/'
-              linkProject='https://github.com/cgrfaria/payment-system'
+              linkProject='https://payment-system-seven.vercel.app/'
               type='Featured Project'
               />
             </div>
@@ -197,7 +217,7 @@ const projects = () => {
               Express, Tailwind CSS, among other tools.'
               link='https://shorts-ai-cgrfaria.vercel.app/'
               github='https://github.com/cgrfaria'
-              linkProject='https://github.com/cgrfaria/shorts_ai'
+              linkProject='https://shorts-ai-cgrfaria.vercel.app/'
               type='Featured Project'
               />
             </div>
@@ -206,8 +226,10 @@ const projects = () => {
             <Project 
               title='Movie Land'
               img={project5}
+              summary='This user-friendly platform, developed in React, allows movie enthusiasts to browse 
+              through a catalog of films and access essential information about each selected movie.'
               link='https://movie-land-navy.vercel.app/'
-              linkProject='https://github.com/cgrfaria/movie_land'
+              linkProject='https://movie-land-navy.vercel.app/'
               type='Featured Project'
               />
             </div>
@@ -216,8 +238,10 @@ const projects = () => {
               <Project 
               title='World Cup Calendar'
               img={project6}
+              summary='A dedicated web application or digital calendar that offers football fans a 
+              detailed schedule of all the matches set to take place during the FIFA World Cup 2022.'
               link='https://world-cup-calendar.vercel.app/'
-              linkProject='https://github.com/cgrfaria/world-cup-calendar'
+              linkProject='https://world-cup-calendar.vercel.app/'
               type='Featured Project'
               />
             </div>

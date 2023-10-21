@@ -24,7 +24,7 @@ export default function Home() {
 
         <Layout className='pt-0 md:p-16 sm:pt-8'>
           <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className='w-1/2 md:w-full'>
+            <div className='w-1/2 md:w-full md:mb-10 xs:mb-5'>
               <Image src={profilePic} alt='Carlos Gustavo' className='w-full h-auto
               mb-[100px] lg:hidden md:inline-block md:mb-0 md:w-full md:ml-[40px] 
               sm:ml-[18px]' 
@@ -52,7 +52,7 @@ export default function Home() {
                   Resume <LinkArrow className={'w-6 ml-1 md:w-4'} />
                 </Link>
 
-                <Link href="mailto:cgrfaria@gmail.com" target={"_blank"}
+                <Link href="/contacts"
                   className=' flex items-center bg-white text-dark p-2.5 px-6 rounded-lg 
                   ml-4 text-lg font-semibold capitalize hover:bg-dark hover:text-light
                   md:text-base'>

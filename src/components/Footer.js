@@ -21,7 +21,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <Link href="mailto:cgrfaria@gmail.com" target={"_blank"}
+        <Link href="/contacts"
         className='ml-4 text-lg font-medium capitalize text-dark 
         underline hover:no-underline underline-offset-2 dark:text-light lg:ml-0'>
           Say hello

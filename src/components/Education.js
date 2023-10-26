@@ -103,7 +103,7 @@ const Education = () => {
           creating and styling web content."
           />
           <Details 
-          type='UI Design para Iniciantes'
+          type='UI Design to beginners'
           time='Oct 2023' 
           place='Origamid.'
           courseLink='https://www.origamid.com/'
@@ -113,7 +113,7 @@ const Education = () => {
           and user-friendly interfaces for digital products."
           />
           <Details 
-          type='HTML e CSS para Iniciantes'
+          type='HTML e CSS'
           time='Oct 2023' 
           place='Origamid.'
           courseLink='https://www.origamid.com/'
@@ -121,6 +121,16 @@ const Education = () => {
           of web development, specifically focusing on HTML (Hypertext Markup Language) 
           and CSS (Cascading Style Sheets). These two core technologies are essential 
           for creating and styling web pages."
+          />
+          <Details 
+          type='CSS with SASS'
+          time='Oct 2023' 
+          place='Origamid.'
+          courseLink='https://www.origamid.com/'
+          info="SASS is a preprocessor scripting language that simplifies and 
+          enhances the capabilities of standard CSS. The course aims to help 
+          web developers and designers improve their CSS workflow, making it 
+          more efficient, maintainable, and flexible."
           />
 
         </ul>
